@@ -1,0 +1,35 @@
+body {
+    background-image: url('background.png');
+    background-size: cover;
+}
+
+.nav-item a p {
+    visibility: hidden;
+    background-color: #FAF4B7;
+    color: #001D6E;
+    font-size: small;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    top: 80%;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.nav-item a p::after {
+    content: "";
+    position: absolute;
+    top: -25%;
+    left: 10%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent #FAF4B7 transparent;
+}
+
+.nav-item a:hover p {
+    visibility: visible;
+    opacity: 1;
+}
